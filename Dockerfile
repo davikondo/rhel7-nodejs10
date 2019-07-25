@@ -3,8 +3,6 @@ FROM registry.access.redhat.com/rhel7.6
 # Configura o locale para UTF-8
 ENV LANG=en_US.UTF-8 
 ENV LC_ALL=en_US.UTF-8
-ARG REDHAT_USERNAME=${REDHAT_USERNAME}
-ARG REDHAT_PASSWORD=${REDHAT_PASSWORD}
 
 # Registra e habilita o canal do Software Collection
 RUN subscription-manager register --auto-attach --username ${REDHAT_USERNAME} --password ${REDHAT_PASSWORD} --force \
